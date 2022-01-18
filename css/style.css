@@ -5,8 +5,8 @@
 }
 
 :root {
-    --font-one: 'PT Sans', sans-serif;;
-    --font-two: 'Bebas Neue', cursive;
+    --font-one: 'Saira Condensed', sans-serif;
+    --font-two: 'Source Code Pro', monospace;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -16,14 +16,17 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --clr-light: rgb(209, 209, 209);
+    --clr-light: rgb(255, 255, 255);
     --clr-dark: #303030;
     --clr-grey: #636363;
-    --clr-extra: #79ada5;
+    --clr-extra: #97f0e2;
+
+    --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+                  0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-/* not working TODO */
-@media (min-width: 800px) {
+
+@media (min-width: 600px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -41,6 +44,10 @@ body {
     line-height: 1.6;
 }
 
+section{
+    padding: 5em 2em;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -56,12 +63,63 @@ h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
 
 
+.section_title {
+    margin-bottom: .25rem;
+    font-weight: var(--fw-reg);
+}
 
 .section_subtitle {
     margin: 0;
+    margin-bottom: .5rem;
     font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
 }
 
-.about_me-subtitle {
-    background: var(--clr-grey);
+.intro-subtitle {
+    background: var(--clr-extra);
+    color: var(--clr-dark);
+    font-family: var(--font-two);
+    padding: .25em 1em;
+    display: inline-block;
 }
+
+.intro {
+    position: relative;
+}
+
+.intro-img{
+    box-shadow: var(--box-shadow);
+}
+
+@media(min-width: 900px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img head" 
+            "img body"
+            "img body";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro-img{
+        grid-area: img;
+        min-width: 400px;
+    }
+
+    .intro-title{
+        grid-area: head;
+        
+    }
+
+    .intro-subtitle{
+        grid-area: head;
+        margin-top: 3.5em;
+        text-align: center;
+    }
+
+}
+
+
