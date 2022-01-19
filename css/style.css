@@ -26,7 +26,7 @@
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -50,7 +50,6 @@ section{
 
 img {
     display: block;
-    max-width: 100%;
 }
 
 h1, h2, h3 {
@@ -66,13 +65,25 @@ h3 { font-size: var(--fs-h3); }
 .section_title {
     margin-bottom: .25rem;
     font-weight: var(--fw-reg);
+    text-align: center;
 }
 
 .section_subtitle {
-    margin: 0;
-    margin-bottom: .5rem;
+    margin: 0 auto 0.5rem;
     font-size: var(--fs-h3);
     font-weight: var(--fw-reg);
+    text-align: center;
+    
+}
+
+.wallpaper {
+    background: linear-gradient(to bottom, #000000 0%,#303030 100%);
+}
+
+.intro {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 0;
 }
 
 .intro-subtitle {
@@ -80,46 +91,109 @@ h3 { font-size: var(--fs-h3); }
     color: var(--clr-dark);
     font-family: var(--font-two);
     padding: .25em 1em;
-    display: inline-block;
+    max-width: 16em;
 }
 
-.intro {
-    position: relative;
+.intro-body {
+    text-align: center;
 }
+
 
 .intro-img{
     box-shadow: var(--box-shadow);
+    margin: 0 auto 0;
+    max-width: 75%;
+    
 }
 
-@media(min-width: 900px) {
+@media(min-width:700px) {
     .intro {
         display: grid;
-        width: min-content;
+        max-width: 800px;
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas: 
             "img head" 
             "img body"
             "img body";
-        grid-template-columns: min-content max-content;
+        grid-template-columns: 1fr auto;
     }
+
 
     .intro-img{
         grid-area: img;
-        min-width: 400px;
+        min-width: 300px;
     }
 
     .intro-title{
+        text-align: left;
         grid-area: head;
         
     }
 
     .intro-subtitle{
         grid-area: head;
+        margin: 0;
         margin-top: 3.5em;
-        text-align: center;
+    }
+
+    .intro-body {
+        text-align: left;
     }
 
 }
+
+.about_me {
+    text-align: center;
+}
+
+.about_me-title {
+    color: var(--clr-extra);
+    position: relative;
+}
+
+.about_me-title::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.25em auto 0.25em;
+    background: var(--clr-light);
+    
+}
+
+.about_me-body {
+    margin-bottom: 2em;
+}
+
+.hobby-img {
+    box-shadow: var(--box-shadow);
+    margin: 1em auto 0;
+    max-width: 90%;
+}
+
+.hobby{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .hobbies {
+        display: flex;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .hobby-img {
+        width: 1000px;
+    }
+
+    .hobby + .hobby {
+        margin-left: 2em;
+    }
+
+}
+
+
 
 
