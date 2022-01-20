@@ -20,29 +20,40 @@
 
         <!-- Header -->
         <header>
-            <div class="logo">
-                <img src="img/logo.png" alt="">
+            <div>
+                <img class="logo" src="img/logo.jpg" alt="">
             </div>
-            <button class="toggle_navi" aria-label="Navigate">
-                <span class="temp"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#intro">Introduction</a></li>
+            <nav class="hide_for_desktop nav_pane"> 
+                <button class="toggle_navi" aria-label="Navigate">
+                    <span class="temp"></span>
+                </button>
+                <ul class="nav-list nav-list-mobile">
+                    <li class="nav-item"><a class="header_link" href="#intro"><i class="fas fa-wrench"></i> Skills</a></li>
+                    <li class="nav-item"><a class="header_link" href="#about"><i class="far fa-folder-open"></i> Projects</a></li>
+                    <li class="nav-item"><a class="header_link" href="#about"><i class="fas fa-user"></i> About Me</a></li>
                 </ul>
+
             </nav>
+
+            <ul class="nav-list nav-list-desktop hide_for_mobile">
+                <li class="nav-item"><a class="header_link" href="#intro"><i class="fas fa-wrench"></i> Skills</a></li>
+                <li class="nav-item"><a class="header_link" href="#about"><i class="far fa-folder-open"></i> Projects</a></li>
+                <li class="nav-item"><a class="header_link" href="#about"><i class="fas fa-user"></i> About Me</a></li>
+            </ul>    
+
         </header>
         
         
         <!-- Introduction -->
         <section class="intro" id="intro">
             <h1 class="section_title intro-title">Rodrigo Arede</h1>
-            <h2 class="section_subtitle intro-subtitle">&lt;/&gt; software developer</h2>
+            <h2 class="section_subtitle intro-subtitle"><i class="fas fa-code"></i> software developer</h2>
 
             <img class="intro-img" src="img/rodrigo1.jpg" alt="main_profile_pic">
 
             <div class="section_body intro-body">
-                <p>Hi there, welcome to my Website! Here you can find ... sdsd gs dg dsg dsgsdgsg  sg sdgsdgdsgsd sgsgg</p>
+                <p>Hi there, welcome to my Website!</p>
+                <p>Here you can find out my skills, check out some of my work and personal projects, and hopefully learn something about myself.</p>
             </div>
             
         </section>
@@ -61,19 +72,19 @@
                 <div class="hobby">
                     <h3>Travelling</h3>
                     <img class="hobby-img" src="img/suica.jpg" alt="travelling_img">
-                    <p>Me and some friends recently took a 1 month long road trip through 10 countries in Europe! You can check some of my photos here.</p>
+                    <p>Who doesn't love to travel? Recently, me and some friends took a 1 month long road trip through 10 countries in Europe! You can check some of my photos <a class="text_link" href="gallery.html">here</a>.</p>
                 </div>
 
                 <div class="hobby">
                     <h3>Sports</h3>
                     <img class="hobby-img" src="img/snowboard.jpg" alt="sports_img">
-                    <p>Me and some friends recently took a 1 month long road trip through 10 countries in Europe! You can check some of my photos here.</p>
+                    <p>Boards rule! Snowboard & Surf</p>
                 </div>
 
                 <div class="hobby">
                     <h3>Martial Arts</h3>
                     <img class="hobby-img" src="img/taekwondo.jpg" alt="martial_arts_img">
-                    <p>Me and some friends recently took a 1 month long road trip through 10 countries in Europe! You can check some of my photos here.</p>
+                    <p>I love martial arts! I practice Taekwondo and have done Muay Thai in the past. I'm also a big fan of Kung-fu movies. I wonder if I should give it a shot...</p>
                 </div>
 
             </div>
