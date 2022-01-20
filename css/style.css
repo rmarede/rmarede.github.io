@@ -15,10 +15,11 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+    --fs-icon: 1.25rem;
 
     --clr-light: rgb(255, 255, 255);
     --clr-dark: #303030;
-    --clr-grey: #636363;
+    --clr-grey: #a0a0a0;
     --clr-extra: #97f0e2;
 
     --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
@@ -32,6 +33,7 @@
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.15rem;
+        --fs-icon: 2rem;
     }
 }
 
@@ -194,6 +196,36 @@ h3 { font-size: var(--fs-h3); }
 
 }
 
+
+footer {
+    background: #0f0f0f;
+    text-align: center;
+    padding: 0.1em 0;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+    padding: 0;
+}
+
+.footer-item {
+    margin: 0 1em;
+}
+
+.footer-link {
+    color: var(--clr-grey);
+    font-size: var(--fs-icon);
+    padding: .5em;
+}
+
+.footer-link:hover {
+    color: var(--clr-extra);
+    opacity: .8;
+    margin-top: -2;
+}
 
 
 
