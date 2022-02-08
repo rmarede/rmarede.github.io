@@ -32,7 +32,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
-        --fs-body: 1.15rem;
+        --fs-body: 1.2rem;
         --fs-icon: 2rem;
     }
 }
@@ -118,7 +118,7 @@ header {
     right: 0;
     z-index: 100;
 
-    transform: translateX(0%);
+    transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -129,7 +129,7 @@ header {
 
 .header_link {
     color: inherit;
-    font-size: var(--fs-h3);
+    font-size: var(--fs-body);
     text-decoration: none;
 }
 
@@ -202,6 +202,37 @@ header {
 
 }
 
+
+.skills {
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills-title {
+    font-weight: var(--fw-bold);
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
+    margin-top: 2em;
+
+}
+
+.skill-item {
+    margin: 0 1em;
+}
+
+.iconify {
+    font-size: var(--fs-h1);
+}
+
+
+
 .about_me {
     text-align: center;
 }
@@ -263,6 +294,7 @@ header {
     opacity: .8;
 }
 
+
 footer {
     background: #0f0f0f;
     text-align: center;
@@ -273,7 +305,7 @@ footer {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0;
+    margin: 1.2em 0;
     padding: 0;
 }
 
@@ -290,8 +322,6 @@ footer {
 .footer-link:hover {
     color: var(--clr-extra);
 }
-
-
 
 
 
