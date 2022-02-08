@@ -30,7 +30,7 @@
 @media (min-width: 900px) {
     :root {
         --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
+        --fs-h2: 3rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.2rem;
         --fs-icon: 2rem;
@@ -131,6 +131,7 @@ header {
     color: inherit;
     font-size: var(--fs-body);
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .header_link:hover {
@@ -210,7 +211,7 @@ header {
 }
 
 .skills-title {
-    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
     color: var(--clr-extra);
 }
 
@@ -325,6 +326,7 @@ header {
 .text_link {
     color: var(--clr-extra);
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .text_link:hover {
@@ -348,16 +350,23 @@ footer {
 
 .footer-item {
     margin: 0 1em;
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    transform: translateY(-20%);
 }
 
 .footer-link {
     color: var(--clr-grey);
     font-size: var(--fs-icon);
     padding: .5em;
+    transition: 0.3s;
 }
 
 .footer-link:hover {
     color: var(--clr-extra);
+    
 }
 
 
