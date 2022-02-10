@@ -21,9 +21,6 @@
 
         <!-- Header -->
         <header>
-            <div>
-                <img class="logo" src="img/logo.jpg" alt="">
-            </div>
             <nav class="hide_for_desktop nav_pane"> 
                 <button class="toggle_navi" aria-label="Navigate">
                     <span class="temp"></span>
@@ -92,27 +89,40 @@
         <section class="about_me" id="about">
             <h2 class="section_title about_me-title">More About Me...</h2>
 
-            <div class="section_body about_me-body">
-                <p>Ya' see, I'm more than just work. Here are some of my other interests:</p>
-            </div>
+            <i id="prev_hobby" class="fas fa-angle-left"></i>
+            <i id="next_hobby" class="fas fa-angle-right"></i>
+            <div class="hobbies_slide">
 
-            <div class="hobbies">
                 <div class="hobby">
-                    <h3>Travelling</h3>
                     <img class="hobby-img" src="img/suica.jpg" alt="travelling_img">
-                    <p>Who doesn't love to travel? Recently, me and some friends took a 1 month long road trip through 10 countries in Europe! You can check some of my photos <a class="text_link" href="gallery.html">here</a>.</p>
+                    <div class="hobby-text">
+                        <h3 class="hobby-title">Travelling</h3>
+                        <p class="hobby-body">Who doesn't love to travel? Recently, me and some friends took a 1 month long road trip through 10 countries in Europe! You can check some of my photos <a class="text_link" href="gallery.html">here</a>.</p>
+                    </div>
                 </div>
 
                 <div class="hobby">
-                    <h3>Sports</h3>
                     <img class="hobby-img" src="img/snowboard.jpg" alt="sports_img">
-                    <p>Boards rule! Snowboard & Surf</p>
+                    <div class="hobby-text">
+                        <h3 class="hobby-title">Sports</h3>
+                        <p class="hobby-body">Boards rule! Snowboard & Surf</p>
+                    </div>
                 </div>
 
                 <div class="hobby">
-                    <h3>Martial Arts</h3>
                     <img class="hobby-img" src="img/taekwondo.jpg" alt="martial_arts_img">
-                    <p>I love martial arts! I practice Taekwondo and have done Muay Thai in the past. I'm also a big fan of Kung-fu movies. I wonder if I should give it a shot...</p>
+                    <div class="hobby-text">
+                        <h3 class="hobby-title">Martial Arts</h3>
+                        <p class="hobby-body">I love martial arts! I practice Taekwondo and have done Muay Thai in the past. I'm also a big fan of Kung-fu movies. I wonder if I should give it a shot...</p>
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <img class="hobby-img" src="img/taekwondo.jpg" alt="martial_arts_img">
+                    <div class="hobby-text">
+                        <h3 class="hobby-title">Martial Arts</h3>
+                        <p class="hobby-body">I love martial arts! I practice Taekwondo and have done Muay Thai in the past. I'm also a big fan of Kung-fu movies. I wonder if I should give it a shot...</p>
+                    </div>
                 </div>
 
             </div>
@@ -129,5 +139,6 @@
             </ul>
         </footer>
 
+        <script src="js/index.js"></script>
     </body>
 </html>
