@@ -22,5 +22,9 @@ prevBtn.addEventListener('click', function(){
     hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
 });
 
+window.addEventListener('resize', function() {
+    hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
+});
+
 
 
