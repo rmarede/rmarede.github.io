@@ -5,22 +5,23 @@
 }
 
 :root {
-    --font-one: 'Saira Condensed', sans-serif;
-    --font-two: 'Source Code Pro', monospace;
+    --font-title: 'Saira Condensed', sans-serif;
+    --font-main: "Inter", sans-serif;
+    --font-code: 'Source Code Pro', monospace;
 
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --fs-h1: 3rem;
+    --fs-h1: 3.5rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-    --fs-icon: 1.25rem;
+    --fs-icon: 1.5rem;
 
     --clr-light: rgb(255, 255, 255);
     --clr-dark: #303030;
     --clr-grey: #a0a0a0;
-    --clr-extra: #97f0e2;
+    --clr-extra: #a9f097;
 
     --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
                   0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -32,7 +33,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3rem;
         --fs-h3: 1.5rem;
-        --fs-body: 1.2rem;
+        --fs-body: 1.1rem;
         --fs-icon: 2rem;
     }
 }
@@ -41,7 +42,7 @@ body {
     background: var(--clr-dark);
     color: var(--clr-light);
     margin: 0;
-    font-family: var(--font-one);
+    font-family: var(--font-main);
     font-size: var(--fs-body);
     line-height: 1.6;
 }
@@ -65,16 +66,17 @@ h3 { font-size: var(--fs-h3); }
 
 
 .section_title {
+    font-family: var(--font-title);
     margin-bottom: .25rem;
-    font-weight: var(--fw-reg);
+    font-weight: var(--fw-bold);
     text-align: center;
 }
 
 .section_subtitle {
     margin: 0 auto 0.5rem;
+    font-family: var(--font-code);
     font-size: var(--fs-h3);
     font-weight: var(--fw-reg);
-    text-align: center;
     
 }
 
@@ -94,7 +96,7 @@ header {
 .nav-list {
     list-style: none;
     display: flex;
-    font-family: var(--font-two);
+    font-family: var(--font-code);
     padding: 0;
 }
 
@@ -149,10 +151,10 @@ header {
 .intro-subtitle {
     background: var(--clr-extra);
     color: var(--clr-dark);
-    font-family: var(--font-two);
     padding: .25em 1em;
     max-width: 16em;
     font-weight: var(--fw-bold);
+    text-align: center;
 }
 
 .intro-body {
@@ -273,11 +275,12 @@ header {
 
 .about_me {
     width: 60%;
-    margin: auto;
+    margin: 0 auto 4em;
     overflow: hidden;
     padding-left: 0;
     padding-right: 0;
     position: relative;
+    box-shadow: var(--box-shadow);
 }
 
 .about_me-title {
@@ -298,6 +301,7 @@ header {
 #prev_hobby {
     position: absolute;
     top: 50%;
+    left: 5%;
     z-index: 10;
     font-size: var(--fs-h2);
     color: var(--clr-white);
@@ -307,7 +311,7 @@ header {
 #next_hobby {
     position: absolute;
     top: 50%;
-    right: 0%;
+    right: 5%;
     z-index: 10;
     font-size: var(--fs-h2);
     color: var(--clr-white);
@@ -334,13 +338,17 @@ header {
 .hobby-img {
     width: 80%;
     grid-area: img;
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
 .hobby-text {
     width: 80%;
     grid-area: text;
     align-self: center;
+}
+
+.hobby-title {
+    font-weight: var(--fw-bold);
 }
 
 
@@ -353,6 +361,11 @@ header {
 
 .text_link:hover {
     opacity: .8;
+}
+
+.hidden_text_link {
+    text-decoration: none;
+    color: var(--clr-white);
 }
 
 
