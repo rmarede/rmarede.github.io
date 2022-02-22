@@ -217,15 +217,6 @@ header {
     color: var(--clr-extra);
 }
 
-.skills-title::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.25em auto 0.25em;
-    background: var(--clr-light);
-}
-
 .skill-list {
     list-style: none;
     display: flex;
@@ -273,6 +264,39 @@ header {
     color: #990000;
 }
 
+
+.projects {
+    width: 90%;
+    margin: auto;
+    
+} 
+
+.projects-title {
+    color: var(--clr-extra);
+    font-size: var(--fs-h2);
+    margin-bottom: 1em;
+}
+
+.project {
+    display: flex;
+    margin-bottom: 3em;
+    align-items: center;
+}
+
+.project-img {
+    width: 50%;
+    margin-right: 2em;
+    border: 1px solid var(--clr-grey);
+}
+
+.project-text {
+    width: 50%;
+}
+
+
+
+
+
 .about_me {
     width: 90%;
     margin: 0 auto 4em;
@@ -284,7 +308,7 @@ header {
 }
 
 @media (min-width: 1100px) {
-    .about_me {
+    .about_me, .projects {
         max-width: 1000px;
     }
 }
@@ -294,15 +318,6 @@ header {
     position: relative;
 }
 
-.about_me-title::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.25em auto 0.25em;
-    background: var(--clr-light);
-    
-}
 
 #prev_hobby {
     position: absolute;
@@ -414,6 +429,27 @@ footer {
 
 
 
+.skills-title::after, .about_me-title::after, .projects-title::after{
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.25em auto 0.25em;
+    background: var(--clr-light);
+}
+
+
+.fade_on_scroll {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
 
 
 @media (max-width: 799px) {

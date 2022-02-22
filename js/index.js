@@ -26,5 +26,18 @@ window.addEventListener('resize', function() {
     hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
 });
 
+window.addEventListener('scroll', function() {
+    var fade_on_scroll_list = document.querySelectorAll('.fade_on_scroll');
+
+    for (var i = 0; i < fade_on_scroll_list.length; i++) {
+        var slack = 150;
+        var top = fade_on_scroll_list[i].getBoundingClientRect().top; 
+
+        if(top < window.innerHeight - slack) 
+            fade_on_scroll_list[i].classList.add('active');
+        else
+            fade_on_scroll_list[i].classList.remove('active');
+    }
+});
 
 
