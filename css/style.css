@@ -19,9 +19,10 @@
     --fs-icon: 1.5rem;
 
     --clr-light: rgb(255, 255, 255);
-    --clr-dark: #303030;
+    --clr-dark: #202020;
     --clr-grey: #a0a0a0;
     --clr-extra: #a9f097;
+    --clr-black: #0f0f0f;
 
     --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
                   0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -38,14 +39,33 @@
     }
 }
 
+@media (min-width: 1100px) {
+    section {
+        max-width: 1000px;
+    }
+}
+
 body {
-    background: var(--clr-dark);
+    background: #111111;
     color: var(--clr-light);
     margin: 0;
     font-family: var(--font-main);
     font-size: var(--fs-body);
     line-height: 1.6;
 }
+
+#particles-js {
+    height: 100%;
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
 
 section{
     padding: 4em 2em;
@@ -80,13 +100,12 @@ h3 { font-size: var(--fs-h3); }
     
 }
 
-.wallpaper {
-    background: linear-gradient(to bottom, #000000 0%,#303030 100%);
-}
 
 header {
     display: flex;
-    padding: 1em;
+    padding: 1.5em;
+    background: var(--clr-black);
+    box-shadow: var(--box-shadow);
 }
 
 .logo {
@@ -144,8 +163,10 @@ header {
 
 .intro {
     position: relative;
-    max-width: 500px;
+    width: 90%;
     margin: 0 auto 0;
+    background: var(--clr-dark);
+    box-shadow: var(--box-shadow);
 }
 
 .intro-subtitle {
@@ -171,8 +192,7 @@ header {
 @media(min-width:700px) {
     .intro {
         display: grid;
-        max-width: 800px;
-        margin: 0 auto;
+        margin: 2em auto 0;
         grid-column-gap: 1em;
         grid-template-areas: 
             "img head" 
@@ -208,8 +228,10 @@ header {
 
 .skills {
     text-align: center;
-    max-width: 1000px;
-    margin: auto;
+    width: 90%;
+    margin: 1.5em auto;
+    background: var(--clr-dark);
+    box-shadow: var(--box-shadow);
 }
 
 .skills-title {
@@ -267,8 +289,9 @@ header {
 
 .projects {
     width: 90%;
-    margin: auto;
-    
+    margin: 1.5em auto;
+    background: var(--clr-dark);
+    box-shadow: var(--box-shadow);
 } 
 
 .projects-title {
@@ -279,7 +302,7 @@ header {
 
 .project {
     display: flex;
-    margin-bottom: 3em;
+    margin: 3em;
     align-items: center;
 }
 
@@ -299,18 +322,13 @@ header {
 
 .about_me {
     width: 90%;
-    margin: 0 auto 4em;
+    margin: 1.5em auto 4em;
     overflow: hidden;
     padding-left: 0;
     padding-right: 0;
     position: relative;
+    background: var(--clr-dark);
     box-shadow: var(--box-shadow);
-}
-
-@media (min-width: 1100px) {
-    .about_me, .projects {
-        max-width: 1000px;
-    }
 }
 
 .about_me-title {
@@ -392,7 +410,7 @@ header {
 
 
 footer {
-    background: #0f0f0f;
+    background: var(--clr-black);
     text-align: center;
     padding: 0.1em 0;
 }

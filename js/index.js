@@ -1,6 +1,13 @@
 const hobbies_slide = document.querySelector('.hobbies_slide');
 const hobbies = document.querySelectorAll('.hobby');
 
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', './js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
+
 // buttons
 const prevBtn = document.querySelector('#prev_hobby');
 const nextBtn = document.querySelector('#next_hobby');
