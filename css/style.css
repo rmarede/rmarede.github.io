@@ -68,7 +68,7 @@ canvas {
   }
 
 section{
-    padding: 4em 2em;
+    padding: 3em 2em;
 }
 
 img {
@@ -170,22 +170,22 @@ header {
 }
 
 .intro-subtitle {
-    background: var(--clr-extra);
-    color: var(--clr-dark);
-    padding: .25em 1em;
-    max-width: 16em;
+    color: var(--clr-extra);
     font-weight: var(--fw-bold);
+}
+
+.intro-text {
     text-align: center;
 }
 
-.intro-body {
-    text-align: center;
+.intro-title {
+    margin-top: 10%;
 }
 
 .intro-img{
     box-shadow: var(--box-shadow);
     margin: 0 auto 0;
-    max-width: 75%;
+    width: 85%;
     
 }
 
@@ -193,36 +193,30 @@ header {
     .intro {
         display: grid;
         margin: 2em auto 0;
-        grid-column-gap: 1em;
         grid-template-areas: 
-            "img head" 
-            "img body"
-            "img body";
-        grid-template-columns: 1fr auto;
+            "img text";
+        grid-template-columns: 50% 50%;
     }
-
 
     .intro-img{
         grid-area: img;
-        min-width: 300px;
+        align-self: center;
+    }
+
+    .intro-text {
+        grid-area: text;
+        align-items: center;
+        text-align: left;
     }
 
     .intro-title{
         text-align: left;
-        grid-area: head;
-        
     }
 
     .intro-subtitle{
-        grid-area: head;
         margin: 0;
-        margin-top: 3.5em;
+        margin-top: 0.5em;
     }
-
-    .intro-body {
-        text-align: left;
-    }
-
 }
 
 
