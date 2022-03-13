@@ -236,6 +236,14 @@ header {
     }
 }
 
+@media (max-width: 450px) {
+    .skills {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+
 .skill-item:hover {
     transform: scale(1.3);
 }
