@@ -1,3 +1,4 @@
+
 const hobbies_slide = document.querySelector('.hobbies_slide');
 const hobbies = document.querySelectorAll('.hobby');
 
