@@ -166,8 +166,6 @@ header {
 @media(min-width:750px) {
     header{
         max-width: 1000px;
-        background: var(--clr-dark);
-        box-shadow: var(--box-shadow);
     }
 
     .intro {
@@ -384,7 +382,6 @@ header {
 
 
 footer {
-    background: var(--clr-black);
     text-align: center;
     padding: 0.1em 0;
 }
