@@ -391,6 +391,28 @@ header {
     font-weight: var(--fw-bold);
 }
 
+@media(max-width:750px) {
+
+    .about_me {
+        padding-bottom: 2em;
+    }
+
+    .hobby {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hobby-img {
+        width: 70%;
+        margin: auto;
+    }
+
+    .hobby-text {
+        margin-top: 1.5em;
+    }
+}
+
 
 
 .text_link {
