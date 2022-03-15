@@ -49,3 +49,21 @@ window.addEventListener('scroll', function() {
 });
 
 
+
+var i= 0;
+var txt = "software developer";
+
+function type() {
+    document.getElementById("developer_tag").innerHTML += txt.charAt(i);
+    i++
+    setTimeout(type, 100);
+}
+
+function reset() {
+    document.getElementById("developer_tag").innerHTML = '<i class="fas fa-code"></i> ';
+    i = 0;
+    setInterval(reset, 8000);
+}
+
+type();
+reset();
