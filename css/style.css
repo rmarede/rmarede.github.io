@@ -318,28 +318,21 @@ header {
 .career {
     width: 90%;
     margin: 1.5em auto;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .career-title {
     color: var(--clr-extra);
 }
 
-.timeline-container {
-    width: 100%;
-    margin: 2em auto 0;
-    height: auto;
-    padding: 0;
-    display: flex;
-    
-}
-
 
 .timeline {
     list-style: none;
     width: 100%;
+    height: auto;
+    margin: 2em auto 0;
     padding: 0%;
-    margin: auto;
     position: relative;
 }
 
@@ -389,7 +382,7 @@ header {
         border-radius: 50%;
         top: 0%;
     }
-    
+ 
     
     .timeline-content:nth-child(odd) {
         float: left;
