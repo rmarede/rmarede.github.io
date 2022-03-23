@@ -62,7 +62,7 @@ function type() {
 function reset() {
     document.getElementById("developer_tag").innerHTML = '<i class="fas fa-code"></i> ';
     i = 0;
-    setInterval(reset, 8000);
+    setTimeout(reset, 8000);
 }
 
 type();
