@@ -1,44 +1,50 @@
 
-const hobbies_slide = document.querySelector('.hobbies_slide');
-const hobbies = document.querySelectorAll('.hobby');
-
-
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', './js/particles.json', function() {
     console.log('callback - particles.js config loaded');
-  });
+});
 
 
-// buttons
+// ABOUT ME SLIDER
+
+const hobbies_slide = document.querySelector('.hobbies_slide');
+const hobbies = document.querySelectorAll('.hobby');
+  
 const prevBtn = document.querySelector('#prev_hobby');
 const nextBtn = document.querySelector('#next_hobby');
-
-// counter
+  
+nextBtn.addEventListener('click', slideNext);
+prevBtn.addEventListener('click', slidePrev);
+var sliderTimer = setInterval(slideNext, 10000);
+  
 let counter = 0;
 
-// button listeners
-
-nextBtn.addEventListener('click', function(){
+function slideNext(){
     if (counter < hobbies.length - 1) counter++;
     else counter = 0;
     hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
-});
+    clearInterval(sliderTimer);
+    sliderTimer = setInterval(slideNext, 10000);
+}
 
-prevBtn.addEventListener('click', function(){
+function slidePrev(){
     if (counter > 0) counter--;
     else counter = hobbies.length - 1;
     hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
-});
+}
 
 window.addEventListener('resize', function() {
     hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
 });
 
+
+// FADE ON SCROLL ANIMATION
+
 window.addEventListener('scroll', function() {
     var fade_on_scroll_list = document.querySelectorAll('.fade_on_scroll');
 
     for (var i = 0; i < fade_on_scroll_list.length; i++) {
-        var slack = 150;
+        var slack = 130;
         var top = fade_on_scroll_list[i].getBoundingClientRect().top; 
 
         if(top < window.innerHeight - slack) 
@@ -49,6 +55,7 @@ window.addEventListener('scroll', function() {
 });
 
 
+// SOFTWARE DEVELOPER TYPING ANIMATION
 
 var i= 0;
 var txt = "software developer";
