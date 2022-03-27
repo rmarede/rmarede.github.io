@@ -31,6 +31,8 @@ function slidePrev(){
     if (counter > 0) counter--;
     else counter = hobbies.length - 1;
     hobbies_slide.style.transform = 'translateX(' + (-hobbies[0].clientWidth*counter) + 'px)';
+    clearInterval(sliderTimer);
+    sliderTimer = setInterval(slideNext, 10000);
 }
 
 window.addEventListener('resize', function() {
