@@ -345,9 +345,31 @@ header {
     margin: 1em auto 1em;
 }
 
+.work-header {
+    display: flex;
+}
+
 .work-date {
     margin-bottom: 0.5em;
     font-size: var(--fs-small);
+}
+
+.work-logo {
+    width: 20%;
+    height: 100%;
+    padding: 0%;
+    margin-right: 3%;
+    align-self:center;
+}
+
+@media(max-width:450px) {
+    .work-logo {
+        display: none;
+    }
+}
+
+.work-text{
+    margin-top: 0.5em;
 }
 
 @media(min-width:750px) {
