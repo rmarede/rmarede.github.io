@@ -62,7 +62,7 @@ canvas {
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: -1000;
   }
 
 section{
@@ -199,8 +199,30 @@ header {
     text-align: center;
     width: 90%;
     margin: 1.5em auto;
-    background: var(--clr-dark);
     box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.skills-polygon1  {
+    position: absolute;
+    background-color: var(--clr-dark);
+    clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);
+    right: 0%;
+    bottom: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+.skills-polygon2  {
+    position: absolute;
+    background-color: #252525;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0 100%);
+    right: 0%;
+    bottom: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
 .skills-title {
@@ -214,7 +236,6 @@ header {
     justify-content: center;
     padding: 0;
     flex-wrap: wrap;
-
 }
 
 .skill-item {
