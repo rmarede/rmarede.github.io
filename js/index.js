@@ -58,7 +58,7 @@ window.addEventListener('scroll', function() {
 // SOFTWARE DEVELOPER TYPING ANIMATION
 
 var i= 0;
-var txt = "software developer";
+var txt = "software engineer";
 
 function type() {
     document.getElementById("developer_tag").innerHTML += txt.charAt(i);
